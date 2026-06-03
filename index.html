@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroVerde — Sustentabilidade no Agronegócio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="agro-sustentavel.css">
+</head>
+<body>
+
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<nav id="navbar">
+  <div class="nav-logo">Agro<span>Verde</span></div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#" onclick="showSection('home')">Início</a></li>
+    <li><a href="#" onclick="showSection('agua')">Água</a></li>
+    <li><a href="#" onclick="showSection('solo')">Solo</a></li>
+    <li><a href="#" onclick="showSection('energia')">Energia</a></li>
+    <li><a href="#" onclick="showSection('biodiversidade')">Biodiversidade</a></li>
+    <li><a href="#" onclick="showSection('tecnologia')">Tecnologia</a></li>
+    <li><a href="#" onclick="showSection('certificacoes')">Certificações</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Menu mobile -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#" onclick="showSection('home'); closeMenu()">🏠 Início</a>
+  <a href="#" onclick="showSection('agua'); closeMenu()">💧 Uso da Água</a>
+  <a href="#" onclick="showSection('solo'); closeMenu()">🌱 Conservação do Solo</a>
+  <a href="#" onclick="showSection('energia'); closeMenu()">⚡ Energia Limpa</a>
+  <a href="#" onclick="showSection('biodiversidade'); closeMenu()">🦋 Biodiversidade</a>
+  <a href="#" onclick="showSection('tecnologia'); closeMenu()">🛰️ Tecnologia Verde</a>
+  <a href="#" onclick="showSection('certificacoes'); closeMenu()">📋 Certificações</a>
+</div>
+
+<!-- ============================================================
+     HOME
+     ============================================================ -->
+<div id="home">
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <div class="hero-badge">Agronegócio Sustentável</div>
+      <h1>O campo que <span class="highlight">alimenta</span><br>o futuro do planeta</h1>
+      <p class="hero-sub">O Brasil é uma potência agrícola. Descubra como unir produtividade e responsabilidade ambiental para garantir alimento, renda e um planeta saudável.</p>
+      <div class="hero-btns">
+        <a href="#topicos" class="btn-primary">Explorar Tópicos</a>
+        <a href="#stats" class="btn-outline">Ver Dados</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Rolar</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- Stats bar -->
+  <section id="stats">
+    <div class="stat-item">
+      <span class="stat-num" data-target="27">0</span>
+      <span class="stat-label">% do PIB brasileiro é o agro</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="215">0</span>
+      <span class="stat-label">Milhões de hectares produtivos</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="68">0</span>
+      <span class="stat-label">% das exportações do agro</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="40">0</span>
+      <span class="stat-label">% redução no desmatamento possível</span>
+    </div>
+  </section>
+
+  <!-- Grid de tópicos -->
+  <section id="topicos">
+    <p class="section-label">Conteúdo</p>
+    <h2 class="section-title">Tópicos Principais</h2>
+    <p class="section-desc">Explore as principais dimensões da sustentabilidade agrícola — clique em qualquer card para aprofundar o tema.</p>
+
+    <div class="topics-grid">
+
+      <a class="topic-card fade-in" onclick="showSection('agua')" href="#">
+        <span class="topic-num">01</span>
+        <span class="topic-icon">💧</span>
+        <span class="topic-tag">Recursos Hídricos</span>
+        <h3>Gestão da Água</h3>
+        <p>Irrigação de precisão, reuso de água e proteção de nascentes para garantir produtividade com eficiência.</p>
+        <span class="topic-arrow">Saiba mais →</span>
+      </a>
+
+      <a class="topic-card fade-in" onclick="showSection('solo')" href="#">
+        <span class="topic-num">02</span>
+        <span class="topic-icon">🌱</span>
+        <span class="topic-tag">Agrossistemas</span>
+        <h3>Conservação do Solo</h3>
+        <p>Plantio direto, cobertura vegetal e integração lavoura-pecuária para um solo vivo e produtivo.</p>
+        <span class="topic-arrow">Saiba mais →</span>
+      </a>
+
+      <a class="topic-card fade-in" onclick="showSection('energia')" href="#">
+        <span class="topic-num">03</span>
+        <span class="topic-icon">⚡</span>
+        <span class="topic-tag">Energia</span>
+        <h3>Energia Limpa no Campo</h3>
+        <p>Solar, biogás e eólica: como a geração distribuída está transformando as fazendas brasileiras.</p>
+        <span class="topic-arrow">Saiba mais →</span>
+      </a>
+
+      <a class="topic-card fade-in" onclick="showSection('biodiversidade')" href="#">
+        <span class="topic-num">04</span>
+        <span class="topic-icon">🦋</span>
+        <span class="topic-tag">Ecologia</span>
+        <h3>Biodiversidade</h3>
+        <p>Corredores ecológicos, APP, Reserva Legal e o papel dos polinizadores na segurança alimentar.</p>
+        <span class="topic-arrow">Saiba mais →</span>
+      </a>
+
+      <a class="topic-card fade-in" onclick="showSection('tecnologia')" href="#">
+        <span class="topic-num">05</span>
+        <span class="topic-icon">🛰️</span>
+        <span class="topic-tag">Inovação</span>
+        <h3>Tecnologia Verde</h3>
+        <p>Drones, sensores IoT, inteligência artificial e satélites a serviço do campo sustentável.</p>
+        <span class="topic-arrow">Saiba mais →</span>
+      </a>
+
+      <a class="topic-card fade-in" onclick="showSection('certificacoes')" href="#">
+        <span class="topic-num">06</span>
+        <span class="topic-icon">📋</span>
+        <span class="topic-tag">Mercado</span>
+        <h3>Certificações & Rastreio</h3>
+        <p>Selos verdes, rastreabilidade da cadeia produtiva e acesso a mercados premium internacionais.</p>
+        <span class="topic-arrow">Saiba mais →</span>
+      </a>
+
+    </div>
+  </section>
+
+</div><!-- /home -->
+
+<!-- ============================================================
+     ÁGUA
+     ============================================================ -->
+<div id="agua" class="content-section">
+  <div class="content-inner">
+    <button class="back-btn" onclick="showSection('home')">← Voltar ao início</button>
+    <div class="section-hero" data-emoji="💧">
+      <h2>Gestão da Água no Agronegócio</h2>
+      <p>A agricultura consome cerca de 70% da água doce mundial. Práticas eficientes podem reduzir esse consumo em até 50% sem perda de produtividade.</p>
+    </div>
+
+    <div class="highlight-box">
+      <p>"A irrigação de precisão é a maior revolução silenciosa do campo: mesma colheita, metade da água. No Brasil, o potencial de economia hídrica no agro supera 80 bilhões de m³/ano."</p>
+    </div>
+
+    <div class="cards-grid">
+      <div class="info-card fade-in">
+        <h4>🚿 Irrigação por Gotejamento</h4>
+        <p>Entrega água diretamente na raiz da planta, reduzindo evaporação. Economiza até 60% de água em relação à irrigação por aspersão convencional. Amplamente usada em horticultura, fruticultura e cana-de-açúcar.</p>
+      </div>
+      <div class="info-card fade-in">
+        <h4>📡 Sensoriamento e IoT</h4>
+        <p>Sensores de umidade no solo conectados à internet permitem irrigar apenas quando necessário. Integrados com estações meteorológicas e modelos de previsão, eliminam o desperdício quase completamente.</p>
+      </div>
+      <div class="info-card fade-in">
+        <h4>♻️ Reuso de Água</h4>
+        <p>Água de chuva coletada em reservatórios, efluentes tratados de agroindústrias e drenagem superficial podem ser reutilizados, reduzindo a demanda por fontes naturais em até 35%.</p>
+      </div>
+      <div class="info-card fade-in">
+        <h4>🌿 Proteção de Nascentes</h4>
+        <p>A Legislação de APP exige matas ciliares em margens de rios e nascentes. Essas matas filtram sedimentos e regulam o ciclo hidrológico, garantindo vazão o ano todo.</p>
+      </div>
+    </div>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Técnica</th><th>Economia de Água</th><th>Custo Relativo</th><th>Adequado Para</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Gotejamento subsuperficial</td><td><span class="badge-verde">55–70%</span></td><td>Alto</td><td>Horticultura, fruticultura</td></tr>
+        <tr><td>Pivô central inteligente</td><td><span class="badge-verde">30–45%</span></td><td>Médio</td><td>Grãos, soja, milho</td></tr>
+        <tr><td>Aspersão convencional</td><td><span class="badge-amarelo">10–20%</span></td><td>Baixo</td><td>Pastagens, forragens</td></tr>
+        <tr><td>Captação de água da chuva</td><td><span class="badge-verde">Variável</span></td><td>Baixo</td><td>Diversas culturas</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ============================================================
+     SOLO
+     ============================================================ -->
+<div id="solo" class="content-section">
+  <div class="content-inner">
+    <button class="back-btn" onclick="showSection('home')">← Voltar ao início</button>
+    <div class="section-hero" data-emoji="🌱">
+      <h2>Conservação e Saúde do Solo</h2>
+      <p>O solo é o maior ativo de uma fazenda. Um centímetro de solo fértil leva 500 anos para se formar na natureza — e pode ser perdido em uma única chuva intensa sem cobertura.</p>
+    </div>
+
+    <div class="highlight-box">
+      <p>"O Brasil possui 215 milhões de hectares agricultáveis. Manter a saúde do solo é garantir que essas terras permaneçam produtivas por gerações — sem fertilizantes sintéticos e sem erosão."</p>
+    </div>
+
+    <div class="cards-grid">
+      <div class="info-card fade-in">
+        <h4>🌾 Plantio Direto</h4>
+        <p>Planta-se sem revolver o solo, mantendo palha da cultura anterior como cobertura. Reduz erosão em até 90%, aumenta matéria orgânica e melhora infiltração de água. Já adotado em mais de 33 milhões de hectares no Brasil.</p>
+      </div>
+      <div class="info-card fade-in">
+        <h4>🔄 Rotação de Culturas</h4>
+        <p>Alternar culturas diferentes na mesma área quebra ciclos de pragas e doenças, melhora a estrutura do solo e equilibra a demanda de nutrientes, reduzindo o uso de defensivos.</p>
+      </div>
+      <div class="info-card fade-in">
+        <h4>🐄 Integração Lavoura-Pecuária</h4>
+        <p>Combinar grãos, pastagem e animais no mesmo espaço em ciclos temporais. O pisoteio controlado e os dejetos dos animais fertilizam naturalmente o solo, aumentando produtividade de ambas as atividades.</p>
+      </div>
+      <div class="info-card fade-in">
+        <h4>🌿 Adubação Verde</h4>
+        <p>Plantas como braquiária, crotalária e nabo forrageiro são cultivadas entre safras para cobrir e nutrir o solo. Fixam nitrogênio atmosférico, economizando em fertilizantes e melhorando a biota do solo.</p>
+      </div>
+    </div>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Prática</th><th>Redução de Erosão</th><th>Ganho de MO</th><th>Tempo de Resposta</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Plantio direto consolidado</td><td><span class="badge-verde">80–90%</span></td><td><span class="badge-verde">Alto</span></td><td>3–5 anos</td></tr>
+        <tr><td>Integração L-P-F</td><td><span class="badge-verde">60–75%</span></td><td><span class="badge-verde">Médio-Alto</span></td><td>2–4 anos</td></tr>
+        <tr><td>Adubação verde</td><td><span class="badge-verde">40–60%</span></td><td><span class="badge-verde">Médio</span></td><td>1–2 anos</td></tr>
+        <tr><td>Terraço e curva de nível</td><td><span class="badge-verde">70–85%</span></td><td><span class="badge-amarelo">Baixo</span></td><td>Imediato</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ============================================================
+     ENERGIA
+     ============================================================ -->
+<div id="energia" class="content-section">
+  <div class="content-inner">
+    <button class="back-btn" onclick="showSection('home')">← Voltar ao início</button>
+    <div class="section-hero" data-emoji="⚡">
+      <h2>Energia Limpa no Campo</h2>
+      <p>O agronegócio é um dos maiores consumidores de energia do país — e também um dos maiores potenciais geradores de energia limpa, com sol, vento e biomassa abundantes.</p>
+    </div>
+
+    <div class="highlight-box">
+      <p>"Uma propriedade rural média pode gerar energia suficiente para cobrir 100% do seu consumo com painéis fotovoltaicos — e ainda injetar excedente na rede, gerando créditos de energia."</p>
+    </div>
+
+    <div class="cards-grid">
+      <div class="info-card fade-in">
+        <h4>☀️ Energia Solar Fotovoltaica</h4>
+        <p>O Brasil tem uma das maiores incidências solares do mundo. Sistemas instalados em telhados de granjas, armazéns e galpões pagam o investimento em 4–6 anos e têm vida útil de 25+ anos.</p>
+      </div>
+      <div class="info-card fade-in">
+        <h4>🐖 Biogás de Dejetos</h4>
+        <p>Dejetos de suínos e bovinos em biodigestores geram metano para geração de eletricidade e biofertilizante líquido. A suinocultura brasileira tem potencial de 2 bilhões de m³ de biogás/ano.</p>
+      </div>
+      <div class="info-card fade-in">
+        <h4>🌬️ Energia Eólica Rural</h4>
+        <p>Regiões do Nordeste e Sul do Brasil têm ventos favoráveis. Mini e microgeradores eólicos podem complementar a energia solar, especialmente em períodos nublados ou noturnos.</p>
+      </div>
+      <div class="info-card fade-in">
+        <h4>🚗 Eletrificação Rural</h4>
+        <p>Tratores, colheitadeiras e veículos de apoio elétricos já são realidade. Combinados à geração própria, reduzem custos com combustível em até 70% e emissões de carbono da operação.</p>
+      </div>
+    </div>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Fonte</th><th>Potencial Brasil</th><th>Retorno do Invest.</th><th>Emissão CO₂</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Solar fotovoltaico</td><td><span class="badge-verde">Muito Alto</span></td><td>4–6 anos</td><td>~20 gCO₂/kWh</td></tr>
+        <tr><td>Biogás (dejetos)</td><td><span class="badge-verde">Alto</span></td><td>3–5 anos</td><td>~30 gCO₂/kWh</td></tr>
+        <tr><td>Biomassa (resíduos)</td><td><span class="badge-verde">Alto</span></td><td>5–8 anos</td><td>Neutro em carbono</td></tr>
+        <tr><td>Mini eólico</td><td><span class="badge-amarelo">Médio</span></td><td>6–10 anos</td><td>~7 gCO₂/kWh</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ============================================================
+     BIODIVERSIDADE
+     ============================================================ -->
+<div id="biodiversidade" class="content-section">
+  <div class="content-inner">
+    <button class="back-btn" onclick="showSection('home')">← Voltar ao início</button>
+    <div class="section-hero" data-emoji="🦋">
+      <h2>Biodiversidade & Ecossistemas</h2>
+      <p>Preservar a biodiversidade não é apenas obrigação legal — é garantia de produtividade. 75% das culturas alimentares dependem de polinizadores, e 30% do valor de uma fazenda está em seus serviços ecossistêmicos.</p>
+    </div>
+
+    <div class="highlight-box">
+      <p>"Fazendas com biodiversidade conservada têm menor incidência de pragas, melhor qualidade de solo e maior resiliência a eventos climáticos extremos — sem depender de pacote tecnológico externo."</p>
+    </div>
+
+    <div class="cards-grid">
+      <div class="info-card fade-in">
+        <h4>🌳 Reserva Legal e APP</h4>
+        <p>O Código Florestal exige 20–80% de Reserva Legal (dependendo do bioma) e APPs em topos de morro e margem de rios. Essas áreas prestam serviços de polinização, controle de erosão e regulação hídrica.</p>
+      </div>
+      <div class="info-card fade-in">
+        <h4>🐝 Polinizadores</h4>
+        <p>Abelhas, borboletas e besouros polinizam culturas que representam US$ 235 bilhões/ano globalmente. Manter faixas de flores nativas nas bordas das lavouras aumenta populações de polinizadores nativos.</p>
+      </div>
+      <div class="info-card fade-in">
+        <h4>🌿 Corredores Ecológicos</h4>
+        <p>Conectar fragmentos de vegetação nativa permite o fluxo gênico de fauna e flora. Fazendas que participam de corredores têm menor pressão de pragas e maior controle biológico natural.</p>
+      </div>
+      <div class="info-card fade-in">
+        <h4>🦅 Controle Biológico</h4>
+        <p>Insetos predadores, fungos entomopatogênicos e parasitoides naturais controlam pragas sem defensivos. A biodiversidade funcional em equilíbrio reduz custos com agroquímicos em 25–40%.</p>
+      </div>
+    </div>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Serviço Ecossistêmico</th><th>Benefício Direto</th><th>Valor Econômico</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Polinização</td><td>Aumento de produtividade</td><td><span class="badge-verde">Muito Alto</span></td></tr>
+        <tr><td>Controle biológico de pragas</td><td>Redução de agroquímicos</td><td><span class="badge-verde">Alto</span></td></tr>
+        <tr><td>Regulação hídrica (matas ciliares)</td><td>Disponibilidade de água</td><td><span class="badge-verde">Alto</span></td></tr>
+        <tr><td>Formação e fertilidade do solo</td><td>Menor fertilização sintética</td><td><span class="badge-verde">Alto</span></td></tr>
+        <tr><td>Sequestro de carbono</td><td>Créditos de carbono</td><td><span class="badge-amarelo">Crescente</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ============================================================
+     TECNOLOGIA
+     ============================================================ -->
+<div id="tecnologia" class="content-section">
+  <div class="content-inner">
+    <button class="back-btn" onclick="showSection('home')">← Voltar ao início</button>
+    <div class="section-hero" data-emoji="🛰️">
+      <h2>Tecnologia Verde no Agro</h2>
+      <p>A agricultura de precisão combina satélites, drones, sensores e inteligência artificial para produzir mais com menos — menos água, menos defensivo, menos combustível.</p>
+    </div>
+
+    <div class="highlight-box">
+      <p>"A aplicação variável de insumos guiada por mapas de produtividade pode reduzir o uso de fertilizantes em até 30% — economizando dinheiro e reduzindo a emissão de óxido nitroso, um gás 300x mais potente que o CO₂."</p>
+    </div>
+
+    <div class="cards-grid">
+      <div class="info-card fade-in">
+        <h4>🚁 Drones Agrícolas</h4>
+        <p>Pulverização de precisão, mapeamento de pragas, análise de NDVI (vigor vegetal) e contagem de plantas. Um drone pode mapear 200 ha/hora com resolução centimétrica, identificando estresses antes de serem visíveis a olho nu.</p>
+      </div>
+      <div class="info-card fade-in">
+        <h4>📡 IoT e Sensores no Campo</h4>
+        <p>Sensores de temperatura, umidade, pH e nutrientes no solo enviam dados em tempo real para plataformas de gestão. Alertas automáticos permitem intervenção precisa e eliminam vistorias desnecessárias.</p>
+      </div>
+      <div class="info-card fade-in">
+        <h4>🤖 Inteligência Artificial</h4>
+        <p>Modelos de ML analisam imagens de satélite, histórico climático e dados agronômicos para recomendar momento ideal de plantio, colheita e aplicação de insumos — maximizando resultados e minimizando impacto.</p>
+      </div>
+      <div class="info-card fade-in">
+        <h4>🔬 Biotecnologia Sustentável</h4>
+        <p>Inoculantes biológicos (rizóbio, micorriza), biofertilizantes e biopesticidas substituem insumos sintéticos. CRISPR e edição gênica desenvolvem variedades mais resistentes à seca, reduzindo irrigação.</p>
+      </div>
+    </div>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Tecnologia</th><th>Redução de Insumo</th><th>Ganho de Produt.</th><th>Maturidade</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Aplicação variável (VRA)</td><td><span class="badge-verde">20–35%</span></td><td><span class="badge-verde">10–15%</span></td><td>Comercial</td></tr>
+        <tr><td>Drone pulverizador</td><td><span class="badge-verde">30–40%</span></td><td><span class="badge-verde">Qualitativo</span></td><td>Comercial</td></tr>
+        <tr><td>IA para previsão de colheita</td><td><span class="badge-amarelo">5–10%</span></td><td><span class="badge-verde">8–20%</span></td><td>Escala</td></tr>
+        <tr><td>Bioinsumos</td><td><span class="badge-verde">15–50%</span></td><td><span class="badge-amarelo">Variável</span></td><td>Crescente</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ============================================================
+     CERTIFICAÇÕES
+     ============================================================ -->
+<div id="certificacoes" class="content-section">
+  <div class="content-inner">
+    <button class="back-btn" onclick="showSection('home')">← Voltar ao início</button>
+    <div class="section-hero" data-emoji="📋">
+      <h2>Certificações & Rastreabilidade</h2>
+      <p>Mercados premium na Europa, EUA e Ásia exigem cada vez mais garantias de sustentabilidade. Certificações abrem novas janelas comerciais e agregam valor ao produto brasileiro.</p>
+    </div>
+
+    <div class="highlight-box">
+      <p>"Alimentos com rastreabilidade certificada chegam a valer 15–30% a mais nos mercados externos. Para o Brasil, que exporta mais de US$ 150 bilhões em produtos agropecuários, esse diferencial é estratégico."</p>
+    </div>
+
+    <div class="cards-grid">
+      <div class="info-card fade-in">
+        <h4>🌿 Rainforest Alliance</h4>
+        <p>Certificação para fazendas com boas práticas ambientais, sociais e econômicas. Muito exigida para café, cacau, banana e chá. Reconhecida em mais de 60 países e abre portas para grandes varejistas globais.</p>
+      </div>
+      <div class="info-card fade-in">
+        <h4>🐄 Orgânico Brasil / USDA Organic</h4>
+        <p>Produção sem agroquímicos sintéticos, com rastreabilidade completa. O mercado global de orgânicos movimenta US$ 220 bilhões/ano com crescimento de 8–10% ao ano. Produtos brasileiros têm grande competitividade.</p>
+      </div>
+      <div class="info-card fade-in">
+        <h4>📊 Créditos de Carbono (REDD+)</h4>
+        <p>Fazendas que conservam florestas ou adotam práticas de baixo carbono podem monetizar esse serviço ambiental em mercados voluntários ou regulados. Potencial de receita adicional de R$ 50–300/ha/ano.</p>
+      </div>
+      <div class="info-card fade-in">
+        <h4>🔍 Rastreabilidade Blockchain</h4>
+        <p>Registros imutáveis em blockchain garantem ao consumidor a origem do produto, práticas usadas e pegada de carbono. Já adotado por grandes frigoríficos e trading companies para exportação.</p>
+      </div>
+    </div>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Certificação</th><th>Foco</th><th>Mercados Alvo</th><th>Sobretaxa Média</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Rainforest Alliance</td><td>Socioambiental</td><td>Europa, EUA</td><td><span class="badge-verde">5–15%</span></td></tr>
+        <tr><td>Orgânico (IBD/USDA)</td><td>Sem agroquímicos</td><td>Global</td><td><span class="badge-verde">20–100%</span></td></tr>
+        <tr><td>Carbon Neutral</td><td>Emissões</td><td>Europa, Ásia</td><td><span class="badge-verde">8–20%</span></td></tr>
+        <tr><td>Fair Trade</td><td>Social</td><td>Europa</td><td><span class="badge-amarelo">10–25%</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <p>© 2025 <strong>AgroVerde</strong> — Sustentabilidade no Agronegócio Brasileiro · Conteúdo educacional e informativo</p>
+</footer>
+
+<!-- JS externo — carregado ao final do body -->
+<script src="agro-sustentavel.js"></script>
+</body>
+</html>
